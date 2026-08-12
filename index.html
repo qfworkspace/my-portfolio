@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>My Portfolio</title>
+
+    <!-- Font Import-->
+    <!-- Connexion aux serveurs Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Import de la police Anton -->
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+
+    <!-- CSS Sheets-->
+    <link rel="stylesheet" href="css/1-token.css">
+    <link rel="stylesheet" href="css/2-global.css">
+    <link rel="stylesheet" href="css/3-components.css">
+    <link rel="stylesheet" href="css/4-layout.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="header__container">
+
+            <!-- Mobile & Tablet Header -->
+            <button type="button" class="header__overlay-opening" aria-label="Open Menu Overlay">
+                <img src="asset/graphics/logos/logo-neutral-100.svg" alt="" class="header__logo">
+            </button>
+
+            <!-- Mobile, Tablet & Desktop Header -->
+            <nav class="header__nav">
+                <a href="home" class="header__home-link" aria-label="Go to Home Page"><img src="asset/graphics/logos/logo-neutral-100.svg" alt="" class="nav__logo"></a>
+                <ul class="header__nav-list">
+                    <li class="nav__item"><a href="about.html" class="nav__link">Who Am I?</a></li>
+                    <li class="nav__item"><a href="my-work.html" class="nav__link">My Work<img src="asset/graphics/icons/icon-arrow-dropdown-disabled.svg" alt="" aria-hidden="true" class="nav__icon--disabled"><img src="asset/graphics/icons/icon-arrow-dropdown-abled.svg" alt="" aria-hidden="true" class="nav__icon--abled"></a>
+                        
+                        <!-- Dropdown Menu -->
+                        <div class="nav__dropdown">
+                            <ul class="dropdown__nav-list">
+                                <li class="dropdown__nav-item"><a href="my-UX-UI-projects.html" class="nav__link">My UX/UI Projects</a></li>
+                                <li class="dropdown__nav-item"><a href="my-3D-creations.html" class="nav__link">My 3D Creations</a></li>
+                                <li class="dropdown__nav-item"><a href="my-logotypes.html" class="nav__link">My Logotypes</a></li>
+                            </ul>
+                        </div>
+                        
+                    </li>
+                    <li class="nav__item"><a href="my-references.html" class="nav__link">My References</a></li>
+                    <li class="nav__item"><a href="contact.html" class="nav__link">Contact Me</a></li>
+                </ul>
+            </nav>
+
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="section hero-section">
+            <!-- Background Video -->
+            <video class="hero-section__bg-video" autoplay muted loop playsinline>
+                <source src="asset/videos/bg-hero-video.mp4" type="video/mp4">
+            </video>
+            <!-- Text Container -->
+            <div class="hero-section__text-container">
+                <h1 class="hero-title">Qetsia Fontange:<br/>A user-based Portfolio</h1>
+                <p class="hero-subtitle">Psychology. Creation. Experience.</p>
+            </div>
+            <!-- Nav Arrow -->
+            <a href="#" class="hero-section__nav-link" aria-label="Scroll to the Next Section"><img src="asset/graphics/icons/icon-arrow-down-nav.svg" alt="" class="hero-section__nav-arrow"></a>
+        </section>
+
+        <!-- Quote Section -->
+        <figure class="site-width home__quote">
+            <blockquote class="quote">&ldquo;People ignore design that ignores people.&rdquo;</blockquote>
+            <figcaption class="author">&ndash; Frank Chimero</figcaption>
+        </figure>
+
+        <!-- Ice Breaking Section -->
+        <section class="section ice-breaking">
+            <div class="ice-breaking__container">
+                <h2 class="ice-breaking__title">Let's break the ice</h2>
+                <p class="ice-breaking__subtitle">Nunc eleifend neque ultricies purus tristique dignissim. Vestibulum fermentum, ante non scelerisque viverra.</p>
+
+                <div class="quiz-carousel-container">
+
+                    <div class="quiz-carousel">
+                        <!-- Quiz Carousel 1 -->
+                        <div class="quiz-slide quiz-slide--active" data-slide="1">
+                            <button type="button" class="quiz-option" data-correct="false">
+                                <img src="asset/graphics/icons/badge-quiz-false.svg" alt="" class="badge badge--false">
+                                <span class="question-indicator">A</span>
+                                <span class="question">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ut orci ante ?</span>
+                            </button>
+                            <button type="button" class="quiz-option" data-correct="false">
+                                <img src="asset/graphics/icons/badge-quiz-false.svg" alt="" class="badge badge--false">
+                                <span class="question-indicator">B</span>
+                                <span class="question">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ut orci ante ?</span>
+                            </button>
+                            <button type="button" class="quiz-option" data-correct="true">
+                                <img src="asset/graphics/icons/bagde-quiz-true.svg" alt="" class="badge badge--true">
+                                <span class="question-indicator">C</span>
+                                <span class="question">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ut orci ante ?</span>
+                            </button>
+                        </div>
+                    
+                        <!-- Quiz Carousel 2 -->
+                        <div class="quiz-slide quiz-slide--inactive" data-slide="2">
+                            <button type="button" class="quiz-option" data-correct="false">
+                                <img src="asset/graphics/icons/badge-quiz-false.svg" alt="" class="badge badge--false">
+                                <span class="question-indicator">A</span>
+                                <span class="question">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ut orci ante ?</span>
+                            </button>
+                            <button type="button" class="quiz-option" data-correct="false">
+                                <img src="asset/graphics/icons/badge-quiz-false.svg" alt="" class="badge badge--false">
+                                <span class="question-indicator">B</span>
+                                <span class="question">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ut orci ante ?</span>
+                            </button>
+                            <button type="button" class="quiz-option" data-correct="true">
+                                <img src="asset/graphics/icons/bagde-quiz-true.svg" alt="" class="badge badge--true">
+                                <span class="question-indicator">C</span>
+                                <span class="question">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ut orci ante ?</span>
+                            </button>
+                        </div>
+
+                        <!-- Quiz Carousel 3 -->
+                        <div class="quiz-slide quiz-slide--inactive" data-slide="3">
+                            <button type="button" class="quiz-option" data-correct="false">
+                                <img src="asset/graphics/icons/badge-quiz-false.svg" alt="" class="badge badge--false">
+                                <span class="question-indicator">A</span>
+                                <span class="question">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ut orci ante ?</span>
+                            </button>
+                            <button type="button" class="quiz-option" data-correct="true">
+                                <img src="asset/graphics/icons/bagde-quiz-true.svg" alt="" class="badge badge--true">
+                                <span class="question-indicator">B</span>
+                                <span class="question">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ut orci ante ?</span>
+                            </button>
+                            <button type="button" class="quiz-option" data-correct="false">
+                                <img src="asset/graphics/icons/badge-quiz-false.svg" alt="" class="badge badge--false">
+                                <span class="question-indicator">C</span>
+                                <span class="question">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ut orci ante ?</span>
+                            </button>
+                        </div>
+
+                    </div>
+
+                    <!-- Page Progress Indicator -->
+                    <div class="carousel-page-indicator" aria-label="Quiz Progress">
+                        <div class="carousel-page-indicator__progress carousel-page-indicator__progress--active" aria-label="Quiz Slide 1"></div>
+                        <div class="carousel-page-indicator__progress" aria-label="Quiz Slide 2"></div>
+                        <div class="carousel-page-indicator__progress" aria-label="Quiz Slide 3"></div>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+
+        <section class="section home-about">
+            <h2 class="home-about__title">Who am I?</h2>
+            <img src="asset/images/profile-picture-qetsia-fontange.png" alt="Qetsia Fontange" class="home-about__profile-picture">
+            <p class="home-about__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ut orci ante. Nunc eleifend neque ultricies purus tristique dignissim. Vestibulum fermentum, ante non scelerisque viverra, mauris est euismod lectus, vestibulum dictum leo neque sed orci.</p>
+            <a href="about.html" class="button home-about__btn">Find Out More</a>
+        </section>
+
+        <section class="section home-reference">
+            <h2 class="home-reference__title">My references</h2>
+            <div class="home-reference__profile-picture-container">
+                <img src="asset/images/profile-picture-person.png" alt="" class="home-reference__profile-picture home-reference__profile-picture--background">
+                <img src="asset/images/profile-picture-gregory-mugnier.png" alt="Grégory Mugnier" class="home-reference__profile-picture home-reference__profile-picture--highlight">
+                <img src="asset/images/profile-picture-person.png" alt="" class="home-reference__profile-picture home-reference__profile-picture--background">
+            </div>
+            <figure class="home-reference__quote-wrapper">
+                <blockquote class="home-reference__quote">&ldquo;Qetsia [...] has developed methodological expertise and the ability to work independently, which will enable her to successfully deliver the projects it is targeting.&rdquo;</blockquote>
+                <figcaption class="home-reference__author">Grégory Mugnier,<br/>
+                    PhD in Marketing & Consumer Psychology, and Personality of 2023 in Marketing & Advertising</figcaption>
+            </figure>
+            <a href="my-references.html" class="button home-reference__button">Check Out my Recommendations</a>
+        </section>
+
+        <section class="section home-nav">
+            <h2 class="home-nav__title">My Work</h2>
+            <nav class="home-nav__wrapper">
+                <ul class="home-nav__list">
+                    <li class="home-nav__item home-nav__projects"><a href="my-UX-UI-projects.html" class="home-nav__link">My UX/UI Projects</a></li>
+                    <li class="home-nav__item home-nav__creations"><a href="my-3D-creations.html" class="home-nav__link">My 3D Creations</a></li>
+                    <li class="home-nav__item home-nav__logo"><a href="my-logotypes.html" class="home-nav__link">My Logotypes</a></li>
+                </ul>
+            </nav>
+        </section>
+
+        <section class="section home-contact">
+            <h2 class="home-contact__title">Contact Me</h2>
+            <a href="contact.html" class="button contact__button">Let's discuss!</a>
+        </section>
+    </main>
+
+    <footer class="site-width footer">
+        <div class="footer__container">
+            <div class="footer__top-container">
+                <div class="footer__contact-icon-container">
+                    <!-- Icons -->
+                    <a href="mailto:qetsia.fontange@gmail.com" class="footer__email-link" aria-label="Send an Email"><div class="footer__icon-container">
+                        <img src="asset/graphics/icons/icon-mail.svg" alt="" class="footer__icon">
+                    </div></a>
+                    <a href="https://www.linkedin.com/in/qetsia-fontange/"
+                        aria-label="Reach for my Linkedin"
+                        class="footer__linkedin-link"
+                        target="_blank"
+                        rel="noopener noreferrer"> <!-- target="_blank" ensures the link opens in a new tab / rel="noopener noreferrer" prevents potential security/performance leaks in older browsers -->
+                            <div class="footer__icon-container">
+                                <img src="asset/graphics/icons/icon-linkedin.svg" alt="" class="footer__icon">
+                            </div>
+                    </a>
+                </div>
+                <div class="footer__text-container">
+                    <h2 class="footer__title title-underline">My expertise</h2>
+                    <ul class="footer__list">
+                        <li class="footer__item">User Experience</li>
+                        <li class="footer__item">User Interface</li>
+                        <li class="footer__item">Brand Identity</li>
+                    </ul>
+                    <a href="acknowledgements.html" class="button footer__button">Acknowledgements</a>
+                </div>
+                <div class="footer__empty-container"></div> <!-- To balance the footer space -->
+            </div>
+            <div class="footer__bottom-container">
+                <p class="footer__copyright">© A portfolio designed and coded with passion by Qetsia Fontange</p>
+                <p class="footer__copyright copyright__discreet">Figma, HTML & CSS</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

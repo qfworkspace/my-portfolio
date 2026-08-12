@@ -1,0 +1,17 @@
+@import "1-tokens.css";
+
+.button {
+    width: fit-content;
+    display: flex;
+    background-color: var(--bg-btn-primary-default);
+    color: var(--fc-btn);
+    padding-inline: 20px;
+    padding-block: 15px;
+    border-radius: 30px;
+    text-decoration: none;
+}
+
+.button:hover {
+    text-decoration: none;
+    background-color: var(--bg-btn-primary-hover);
+}
