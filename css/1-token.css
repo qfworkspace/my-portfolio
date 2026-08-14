@@ -40,6 +40,8 @@
     --lh-paragraph: 1.5;
 
     /* Font Colors */
+    --fc-global-light: var(--neutral-100);
+    --fc-global-dark: var(--neutral-900);
     --fc-heading-light: var(--neutral-50);
     --fc-heading-dark: var(--neutral-900);
     --fc-paragraph-light: var(--neutral-50);
@@ -57,8 +59,8 @@
     --spacing-container-gap: 1.25rem; /* 20px */
     --spacing-card-padding-xy: 1.25rem; /* 20px */
     --spacing-card-gap: 0.4rem; /* 32 px */
-    --spacing-btn-padding-x: 3.75rem; /* 60px */
-    --spacing-btn-padding-y: 1.5rem; /* 24px */
+    --spacing-btn-padding-x: 1.25rem; /* 20px */
+    --spacing-btn-padding-y: 1rem; /* 16px */
     
     /* Radii */
     --radius-card: 1.875rem; /* 30px */

@@ -13,13 +13,15 @@ html {
     min-height: 100%;
 }
 
-body {
+/* Bodies */
+/* Home Page */
+.home-page__body {
     position: relative; /* This ensures pseudo-elements inside it anchor themselves cleanly relative to the document screen. */
     min-height: 100vh;
     min-height: 100dvh; /* Handles dynamic mobile address bars and scroll under the iphone camera */
 }
 
-body::before { /* Create a hardware-accelerated fixed background pseudo-element */
+.home-page__body::before { /* Create a hardware-accelerated fixed background pseudo-element */
     content: ""; /* Required for any ::before or ::after pseudo-element. Without this line, the browser simply won't render the element on screen. */
     position: fixed; /* Pins the background layer directly to the mobile viewport frame so it stays locked in place while the user scrolls through the content. */
     inset: 0; /* Cover top, right, bottom, left */
@@ -33,11 +35,24 @@ body::before { /* Create a hardware-accelerated fixed background pseudo-element 
     pointer-events: none;  /* Allows clicks to pass through to elements below */
 }
 
+.contact-page__bg {
+    content: "";
+    position: fixed;
+    inset: 0;                   /* Shortcut for top: 0, left: 0, right: 0, bottom: 0 */
+    
+    width: 100%;
+    height: 100%;
+    
+    object-fit: cover;          /* Same as background-size: cover */
+    object-position: center;   /* Same as background-position: center */
+    z-index: -99;                 /* Background layer */
+    pointer-events: none;
+}
+
+
 .section { /* Desktop: max-width: 1200px; margin-inline: auto; */
     width: 100%;
     max-width: 90rem; /* 1440px */
-    min-height: 100vh; 
-    min-height: 100dvh; /* 100dvh handles dynamic mobile browser address bars better than 100vh */
     
     margin-inline: auto;
     padding-inline: var(--spacing-body-padding-x);
@@ -48,7 +63,6 @@ body::before { /* Create a hardware-accelerated fixed background pseudo-element 
     
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     gap: var(--spacing-section-gap);
 }
@@ -88,7 +102,7 @@ h4 {
     text-align: center;
 }
 
-p, a, span, li {
+p, a, span, li, button {
     font-family: var(--font-family-paragraph);
     font-size: var(--fs-body);
     max-width: 50.625rem ; /* 810px */
@@ -127,3 +141,4 @@ mark {
     border-radius: 0 10px 0 10px;
     color: var(--fc-paragraph-dark);
 }
+

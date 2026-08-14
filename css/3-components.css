@@ -1,12 +1,13 @@
 @import "1-tokens.css";
 
+/* Buttons */
 .button {
     width: fit-content;
     display: flex;
     background-color: var(--bg-btn-primary-default);
     color: var(--fc-btn);
-    padding-inline: 20px;
-    padding-block: 15px;
+    padding-inline: var(--spacing-btn-padding-x);
+    padding-block: var(--spacing-btn-padding-y);
     border-radius: 30px;
     text-decoration: none;
 }
@@ -14,4 +15,55 @@
 .button:hover {
     text-decoration: none;
     background-color: var(--bg-btn-primary-hover);
+}
+
+.button--link {
+    width: fit-content;
+    display: flex;
+    text-decoration: underline;
+}
+
+.button--link:hover {
+    color: var(--blue-50);
+}
+
+/* Icons */
+.icon-container {
+    width: 55px;
+    height: 55px;
+    background-color: var(--bg-btn-primary-default);
+    border-radius: 50%;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Forms */
+.form-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form__title {
+    font-weight: bold;
+    font-family: var(--font-family-paragraph);
+}
+
+.form-placeholder {
+    width: 100%;
+    background-color: #F3F4F6;
+    padding: 10px;
+    border-radius: 16px;
+    border: none;
+    font-family: var(--font-family-paragraph);
+    font-size: var(--fs-body);
+    font-style: italic;
+}
+
+.form-placeholder:focus {
+    outline: 2px solid var(--blue-50, #0066ff);
+    background-color: #ffffff;
 }

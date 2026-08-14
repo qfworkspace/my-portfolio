@@ -17,47 +17,25 @@
     <link rel="stylesheet" href="css/1-token.css">
     <link rel="stylesheet" href="css/2-global.css">
     <link rel="stylesheet" href="css/3-components.css">
-    <link rel="stylesheet" href="css/4-layout.css">
+    <link rel="stylesheet" href="css/4-header-footer.css">
+    <link rel="stylesheet" href="css/5-layout.css">
+
+
+    <!-- Linkedin Render -->
+    <meta property="og:title" content="Mon Portfolio UX/UI">
+    <meta property="og:description" content="Découvrez mes projets UX/UI.">
+    <meta property="og:image" content="https://qfworkspace.github.io/my-portfolio/asset/images/bg-nav-card-uxui.png">
+    <meta property="og:url" content="https://qfworkspace.github.io/my-portfolio/">
 </head>
 
-<body>
+<body class="home-page__body">
 
-    <header class="header">
-        <div class="header__container">
-
-            <!-- Mobile & Tablet Header -->
-            <button type="button" class="header__overlay-opening" aria-label="Open Menu Overlay">
-                <img src="asset/graphics/logos/logo-neutral-100.svg" alt="" class="header__logo">
-            </button>
-
-            <!-- Mobile, Tablet & Desktop Header -->
-            <nav class="header__nav">
-                <a href="home" class="header__home-link" aria-label="Go to Home Page"><img src="asset/graphics/logos/logo-neutral-100.svg" alt="" class="nav__logo"></a>
-                <ul class="header__nav-list">
-                    <li class="nav__item"><a href="about.html" class="nav__link">Who Am I?</a></li>
-                    <li class="nav__item"><a href="my-work.html" class="nav__link">My Work<img src="asset/graphics/icons/icon-arrow-dropdown-disabled.svg" alt="" aria-hidden="true" class="nav__icon--disabled"><img src="asset/graphics/icons/icon-arrow-dropdown-abled.svg" alt="" aria-hidden="true" class="nav__icon--abled"></a>
-                        
-                        <!-- Dropdown Menu -->
-                        <div class="nav__dropdown">
-                            <ul class="dropdown__nav-list">
-                                <li class="dropdown__nav-item"><a href="my-UX-UI-projects.html" class="nav__link">My UX/UI Projects</a></li>
-                                <li class="dropdown__nav-item"><a href="my-3D-creations.html" class="nav__link">My 3D Creations</a></li>
-                                <li class="dropdown__nav-item"><a href="my-logotypes.html" class="nav__link">My Logotypes</a></li>
-                            </ul>
-                        </div>
-                        
-                    </li>
-                    <li class="nav__item"><a href="my-references.html" class="nav__link">My References</a></li>
-                    <li class="nav__item"><a href="contact.html" class="nav__link">Contact Me</a></li>
-                </ul>
-            </nav>
-
-        </div>
-    </header>
+    <!-- Display of the Header from header.html -->
+    <div id="header-placeholder"></div>
 
     <main>
         <!-- Hero Section -->
-        <section class="section hero-section">
+        <section class="section home-page__section hero-section">
             <!-- Background Video -->
             <video class="hero-section__bg-video" autoplay muted loop playsinline>
                 <source src="asset/videos/bg-hero-video.mp4" type="video/mp4">
@@ -78,7 +56,7 @@
         </figure>
 
         <!-- Ice Breaking Section -->
-        <section class="section ice-breaking">
+        <section class="section home-page__section ice-breaking">
             <div class="ice-breaking__container">
                 <h2 class="ice-breaking__title">Let's break the ice</h2>
                 <p class="ice-breaking__subtitle">Nunc eleifend neque ultricies purus tristique dignissim. Vestibulum fermentum, ante non scelerisque viverra.</p>
@@ -156,14 +134,16 @@
             </div>
         </section>
 
-        <section class="section home-about">
-            <h2 class="home-about__title">Who am I?</h2>
-            <img src="asset/images/profile-picture-qetsia-fontange.png" alt="Qetsia Fontange" class="home-about__profile-picture">
-            <p class="home-about__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ut orci ante. Nunc eleifend neque ultricies purus tristique dignissim. Vestibulum fermentum, ante non scelerisque viverra, mauris est euismod lectus, vestibulum dictum leo neque sed orci.</p>
-            <a href="about.html" class="button home-about__btn">Find Out More</a>
+        <section class="section home-page__section home-about">
+            <div class="home-about__wrapper">
+                <h2 class="home-about__title">Who am I?</h2>
+                <img src="asset/images/profile-picture-qetsia-fontange.png" alt="Qetsia Fontange" class="home-about__profile-picture">
+                <p class="home-about__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ut orci ante. Nunc eleifend neque ultricies purus tristique dignissim. Vestibulum fermentum, ante non scelerisque viverra, mauris est euismod lectus, vestibulum dictum leo neque sed orci.</p>
+                <a href="about.html" class="button home-about__btn">Find Out More</a>
+            </div>
         </section>
 
-        <section class="section home-reference">
+        <section class="section home-page__section home-reference">
             <h2 class="home-reference__title">My references</h2>
             <div class="home-reference__profile-picture-container">
                 <img src="asset/images/profile-picture-person.png" alt="" class="home-reference__profile-picture home-reference__profile-picture--background">
@@ -178,7 +158,7 @@
             <a href="my-references.html" class="button home-reference__button">Check Out my Recommendations</a>
         </section>
 
-        <section class="section home-nav">
+        <section class="section home-page__section home-nav">
             <h2 class="home-nav__title">My Work</h2>
             <nav class="home-nav__wrapper">
                 <ul class="home-nav__list">
@@ -189,47 +169,25 @@
             </nav>
         </section>
 
-        <section class="section home-contact">
+        <section class="section home-page__section home-contact">
             <h2 class="home-contact__title">Contact Me</h2>
             <a href="contact.html" class="button contact__button">Let's discuss!</a>
         </section>
     </main>
 
-    <footer class="site-width footer">
-        <div class="footer__container">
-            <div class="footer__top-container">
-                <div class="footer__contact-icon-container">
-                    <!-- Icons -->
-                    <a href="mailto:qetsia.fontange@gmail.com" class="footer__email-link" aria-label="Send an Email"><div class="footer__icon-container">
-                        <img src="asset/graphics/icons/icon-mail.svg" alt="" class="footer__icon">
-                    </div></a>
-                    <a href="https://www.linkedin.com/in/qetsia-fontange/"
-                        aria-label="Reach for my Linkedin"
-                        class="footer__linkedin-link"
-                        target="_blank"
-                        rel="noopener noreferrer"> <!-- target="_blank" ensures the link opens in a new tab / rel="noopener noreferrer" prevents potential security/performance leaks in older browsers -->
-                            <div class="footer__icon-container">
-                                <img src="asset/graphics/icons/icon-linkedin.svg" alt="" class="footer__icon">
-                            </div>
-                    </a>
-                </div>
-                <div class="footer__text-container">
-                    <h2 class="footer__title title-underline">My expertise</h2>
-                    <ul class="footer__list">
-                        <li class="footer__item">User Experience</li>
-                        <li class="footer__item">User Interface</li>
-                        <li class="footer__item">Brand Identity</li>
-                    </ul>
-                    <a href="acknowledgements.html" class="button footer__button">Acknowledgements</a>
-                </div>
-                <div class="footer__empty-container"></div> <!-- To balance the footer space -->
-            </div>
-            <div class="footer__bottom-container">
-                <p class="footer__copyright">© A portfolio designed and coded with passion by Qetsia Fontange</p>
-                <p class="footer__copyright copyright__discreet">Figma, HTML & CSS</p>
-            </div>
-        </div>
-    </footer>
+    <!-- Display of the Header from header.html -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Component Loader Script -->
+    <script>
+    fetch('components/header.html')
+        .then(response => response.text())
+        .then(data => document.getElementById('header-placeholder').innerHTML = data);
+
+    fetch('components/footer.html')
+        .then(response => response.text())
+        .then(data => document.getElementById('footer-placeholder').innerHTML = data);
+    </script>
 
 </body>
 </html>
