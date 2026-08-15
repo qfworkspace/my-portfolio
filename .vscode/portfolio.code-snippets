@@ -1,0 +1,55 @@
+{
+	"Breadcrumb Navigation": {
+		"scope": "html",
+		"prefix": "bread",
+		"body": [
+			"<nav",
+			"    class=\"breadcrumb\"",
+			"    aria-label=\"breadcrumb\">",
+			"    <ol class=\"breadcrumb__list\">",
+			"        <li class=\"breadcrumb__item\">",
+			"            <a",
+			"                href=\"index.html\"",
+			"                class=\"breadcrumb__link\">Home</a>",
+			"        </li>",
+			"        <li class=\"breadcrumb__item breadcrumb__item--active\">",
+			"            <span",
+			"                class=\"breadcrumb__link\"",
+			"                aria-current=\"page\">$1</span>",
+			"        </li>",
+			"    </ol>",
+			"</nav>"
+		],
+		"description": "Insert portfolio breadcrumb component"
+	},
+
+	"My Work Card": {
+		"scope": "html",
+		"prefix": "work-card",
+		"body": [
+			"<a",
+			"    href=\"$1\"",
+			"    class=\"work__card\">",
+			"    <img",
+			"        src=\"$2\"",
+			"        alt=\"$3\"",
+			"        class=\"card__preview-picture\">",
+			"    <div class=\"card__content\">",
+			"        <h3 class=\"card__title\">$4</h3>",
+			"        <div class=\"card__tag-container\">",
+			"            <div class=\"tag-container\">",
+			"                <p class=\"card__tag\">$5</p>",
+			"            </div>",
+			"            <div class=\"tag-container\">",
+			"                <p class=\"card__tag\">$6</p>",
+			"            </div>",
+			"            <div class=\"tag-container\">",
+			"                <p class=\"card__tag\">$7</p>",
+			"            </div>",
+			"        </div>",
+			"    </div>",
+			"</a>"
+		],
+		"description": "Insert portfolio work card component with tag pill wrappers"
+	}
+}

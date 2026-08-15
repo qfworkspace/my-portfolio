@@ -2,13 +2,35 @@
 
 /* Mobile */
 /* Home Page */
+.home-page {
+    position: relative; /* This ensures pseudo-elements inside it anchor themselves cleanly relative to the document screen. */
+    min-height: 100vh;
+    min-height: 100dvh; /* Handles dynamic mobile address bars and scroll under the iphone camera */
+}
+
+.home-page::before { /* Create a hardware-accelerated fixed background pseudo-element */
+    content: ""; /* Required for any ::before or ::after pseudo-element. Without this line, the browser simply won't render the element on screen. */
+    position: fixed; /* Pins the background layer directly to the mobile viewport frame so it stays locked in place while the user scrolls through the content. */
+    inset: 0; /* Cover top, right, bottom, left */
+    
+    background-image: url(../asset/images/bg-picture-body.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; /* Ensures image covers full viewport */
+    
+    z-index: -99;            /* Places image behind all content */
+    pointer-events: none;  /* Allows clicks to pass through to elements below */
+}
+
 .home-page__section {
     min-height: 100vh; 
     min-height: 100dvh; /* 100dvh handles dynamic mobile browser address bars better than 100vh */
+    background-color: var(--bg-body-default);
+    color: var(--neutral-100);
 }
 
 /* Hero Section */
-.hero-section {
+.home-page .hero-section {
     position: relative; /* Keeps video contained */
     width: 100%;
     display: flex;
@@ -17,10 +39,10 @@
     align-items: center;
     overflow: hidden;
     background-color: transparent;
-    padding: var(--spacing-section-padding-y);
+    padding: var(--spacing-section-padding-block);
 }
 
-.hero-section__bg-video {
+.home-page .hero-section__bg-video {
     position: absolute;
     inset: 0;                   /* Shortcut for top: 0, left: 0, right: 0, bottom: 0 */
     width: 100%;
@@ -31,43 +53,17 @@
     pointer-events: none;
 }
 
-.hero-section__text-container {
+.home-page .hero-section__text-container {
     text-align: center;
     color: var(--fc-paragraph-light);
     position: relative;
 }
 
-/* Hero Nav Link */
-.hero-section__nav-link {
+.home-page .hero-section__nav-arrow-link {
     position: absolute;
-    bottom: var(--spacing-section-padding-y, 2rem); /* Pins to the bottom padding edge */
+    bottom: var(--spacing-section-padding-block, 2rem); /* Pins to the bottom padding edge */
     left: 50%;
     transform: translateX(-50%); /* Centers horizontally */
-    
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-
-    width: 66px;  /* Comfortable touch target size */
-    height: 66px;
-    padding: 0;   /* No padding to avoid border-box math glitches */
-}
-
-.hero-section__nav-arrow {
-    width: 48px;               /* Set size directly on the image */
-    height: auto;
-    display: block;
-    /* Runs a smooth infinite loop matching Figma's Smart Animate easing */
-    animation: floatArrow 2s ease-in-out infinite;
-}
-
-@keyframes floatArrow {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(8px); /* Moves down 8px at mid-point */
-  }
 }
 
 
@@ -78,7 +74,7 @@
     margin-inline: auto;
 
 
-    padding-inline: var(--spacing-body-padding-x);
+    padding-inline: var(--spacing-body-padding-inline);
     padding-block: 108px;
     background-color: var(--bg-body-default);
     color: var(--neutral-100);
@@ -199,7 +195,7 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-    padding: var(--spacing-section-padding-y);
+    padding: var(--spacing-section-padding-block);
 }
 
 
@@ -272,7 +268,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: var(--container-group-gap, 24px); /* Variable + default to 24px */
+    gap: var(--container-container-gap, 24px); /* Variable + default to 24px */
     width: 100%;
 }
 
@@ -338,6 +334,7 @@
 .home-contact {
     background-image: url(../asset/images/bg-picture-contact.png);
     background-position: center;
+    justify-content: center;
 }
 
 
@@ -400,7 +397,7 @@
     justify-content: space-between;
     gap: var(--spacing-container-gap);
     background-color: var(--neutral-50-transparency-70);
-    padding-right: var(--spacing-btn-padding-x);
+    padding-right: var(--spacing-btn-padding-inline);
     border-radius: var(--radius-btn);
 }
 
@@ -415,7 +412,7 @@
 .contact-page__nav-button--active {
     background-color: var(--blue-50);
     width: fit-content;
-    padding: var(--spacing-btn-padding-y) var(--spacing-btn-padding-x);
+    padding: var(--spacing-btn-padding-block) var(--spacing-btn-padding-inline);
     border-radius: var(--radius-btn);
 }
 
@@ -424,7 +421,7 @@
     background-color: var(--neutral-50);
     box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.25);
     border-radius: var(--radius-card);
-    padding: var(--spacing-card-padding-xy);
+    padding: var(--spacing-card-padding);
     display: flex;
     flex-direction: column;
     gap: var(--spacing-container-gap);
@@ -485,4 +482,31 @@
     .contact-page__side-text {
         text-wrap: nowrap;
     }
+}
+
+
+/* UX/UI Page */
+.ux-ui-page {
+    background-image: url(../asset/images/bg-ux-ui.png);
+    background-repeat: no-repeat;
+}
+
+.ux-ui-page__main {
+    padding-top: 138px;
+}
+
+.ux-ui-page__hero-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    color: var(--fc-global-light);
+}
+
+.ux-ui-page__paragraph-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-container-gap);
 }

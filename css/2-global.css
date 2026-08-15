@@ -11,54 +11,23 @@ html {
     padding: 0;
     background-color: var(--blue-900);
     min-height: 100%;
+    scroll-behavior: smooth;
 }
 
-/* Bodies */
-/* Home Page */
-.home-page__body {
-    position: relative; /* This ensures pseudo-elements inside it anchor themselves cleanly relative to the document screen. */
-    min-height: 100vh;
-    min-height: 100dvh; /* Handles dynamic mobile address bars and scroll under the iphone camera */
+/* Accessibility: Turn off smooth scrolling if the user requested reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
 }
-
-.home-page__body::before { /* Create a hardware-accelerated fixed background pseudo-element */
-    content: ""; /* Required for any ::before or ::after pseudo-element. Without this line, the browser simply won't render the element on screen. */
-    position: fixed; /* Pins the background layer directly to the mobile viewport frame so it stays locked in place while the user scrolls through the content. */
-    inset: 0; /* Cover top, right, bottom, left */
-    
-    background-image: url(../asset/images/bg-picture-body.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover; /* Ensures image covers full viewport */
-    
-    z-index: -99;            /* Places image behind all content */
-    pointer-events: none;  /* Allows clicks to pass through to elements below */
-}
-
-.contact-page__bg {
-    content: "";
-    position: fixed;
-    inset: 0;                   /* Shortcut for top: 0, left: 0, right: 0, bottom: 0 */
-    
-    width: 100%;
-    height: 100%;
-    
-    object-fit: cover;          /* Same as background-size: cover */
-    object-position: center;   /* Same as background-position: center */
-    z-index: -99;                 /* Background layer */
-    pointer-events: none;
-}
-
 
 .section { /* Desktop: max-width: 1200px; margin-inline: auto; */
     width: 100%;
     max-width: 90rem; /* 1440px */
     
     margin-inline: auto;
-    padding-inline: var(--spacing-body-padding-x);
-    padding-block: var(--spacing-section-padding-y);
-    background-color: var(--bg-body-default);
-    color: var(--neutral-100);
+    padding-inline: var(--spacing-body-padding-inline);
+    padding-block: var(--spacing-section-padding-block);
 
     
     display: flex;

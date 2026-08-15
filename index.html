@@ -20,6 +20,9 @@
     <link rel="stylesheet" href="css/4-header-footer.css">
     <link rel="stylesheet" href="css/5-layout.css">
 
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="asset/graphics/logos/your-logo.svg">
+
 
     <!-- Linkedin Render -->
     <meta property="og:title" content="Mon Portfolio UX/UI">
@@ -28,7 +31,7 @@
     <meta property="og:url" content="https://qfworkspace.github.io/my-portfolio/">
 </head>
 
-<body class="home-page__body">
+<body class="home-page">
 
     <!-- Display of the Header from header.html -->
     <div id="header-placeholder"></div>
@@ -46,11 +49,19 @@
                 <p class="hero-subtitle">Psychology. Creation. Experience.</p>
             </div>
             <!-- Nav Arrow -->
-            <a href="#" class="hero-section__nav-link" aria-label="Scroll to the Next Section"><img src="asset/graphics/icons/icon-arrow-down-nav.svg" alt="" class="hero-section__nav-arrow"></a>
+            <a 
+            href="#home__quote" 
+            class="hero-section__nav-arrow-link" 
+            aria-label="Scroll to the Next Section">
+                <img 
+                src="asset/graphics/icons/icon-arrow-down-nav.svg" 
+                alt="" 
+                class="hero-section__nav-arrow">
+            </a>
         </section>
 
         <!-- Quote Section -->
-        <figure class="site-width home__quote">
+        <figure id="home__quote" class="site-width home__quote">
             <blockquote class="quote">&ldquo;People ignore design that ignores people.&rdquo;</blockquote>
             <figcaption class="author">&ndash; Frank Chimero</figcaption>
         </figure>
@@ -175,7 +186,7 @@
         </section>
     </main>
 
-    <!-- Display of the Header from header.html -->
+    <!-- Display of the Footer from footer.html -->
     <div id="footer-placeholder"></div>
 
     <!-- Component Loader Script -->

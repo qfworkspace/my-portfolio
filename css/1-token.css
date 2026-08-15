@@ -49,18 +49,18 @@
     --fc-btn: var(--neutral-900);
 
     /* Spacings */
-    --spacing-body-padding-x: 1.25rem; /* 20 px */
-    --spacing-header-padding-x: 1.25rem; /* 20px */
-    --spacing-header-padding-y: 1.25rem; /* 20px */
-    --spacing-footer-padding-x: 1.25rem; /* 20 px */
-    --spacing-footer-padding-y: 3.5rem; /* 56px */
-    --spacing-section-padding-y: 3.5rem; /* 56px */
+    --spacing-body-padding-inline: 1.25rem; /* 20 px */
+    --spacing-header-padding-inline: 1.25rem; /* 20px */
+    --spacing-header-padding-block: 1.25rem; /* 20px */
+    --spacing-footer-padding-inline: 1.25rem; /* 20 px */
+    --spacing-footer-padding-block: 3.5rem; /* 56px */
+    --spacing-section-padding-block: 3.5rem; /* 56px */
     --spacing-section-gap: 2rem; /* 32px */
     --spacing-container-gap: 1.25rem; /* 20px */
-    --spacing-card-padding-xy: 1.25rem; /* 20px */
+    --spacing-card-padding: 1.25rem; /* 20px */
     --spacing-card-gap: 0.4rem; /* 32 px */
-    --spacing-btn-padding-x: 1.25rem; /* 20px */
-    --spacing-btn-padding-y: 1rem; /* 16px */
+    --spacing-btn-padding-inline: 1.25rem; /* 20px */
+    --spacing-btn-padding-block: 1rem; /* 16px */
     
     /* Radii */
     --radius-card: 1.875rem; /* 30px */
@@ -98,14 +98,14 @@
         --fs-body: 1rem; /* 16px */
 
         /* Spacings */
-        --spacing-body-padding-x: 3rem; /* 48 px */
-        --spacing-header-padding-x: 3rem; /* 48px */
-        --spacing-header-padding-y: 1.25rem; /* 20px */
-        --spacing-footer-padding-x: 3rem; /* 48 px */
-        --spacing-footer-padding-y: 4rem; /* 64px */
-        --spacing-section-padding-y: 4rem; /* 64px */
+        --spacing-body-padding-inline: 3rem; /* 48 px */
+        --spacing-header-padding-inline: 3rem; /* 48px */
+        --spacing-header-padding-block: 1.25rem; /* 20px */
+        --spacing-footer-padding-inline: 3rem; /* 48 px */
+        --spacing-footer-padding-block: 4rem; /* 64px */
+        --spacing-section-padding-block: 4rem; /* 64px */
         --spacing-container-gap: 1.25rem; /* 20px */
-        --spacing-card-padding-xy: 1.5rem; /* 24px */
+        --spacing-card-padding: 1.5rem; /* 24px */
     }
 }
 
@@ -121,15 +121,15 @@
         --fs-body: 1rem; /* 16px */
 
         /* Spacings */
-        --spacing-body-padding-x: 6.5rem; /* 104 px */
-        --spacing-header-padding-x: 4rem; /* 64px */
-        --spacing-header-padding-y: 1.25rem; /* 20px */
+        --spacing-body-padding-inline: 6.5rem; /* 104 px */
+        --spacing-header-padding-inline: 4rem; /* 64px */
+        --spacing-header-padding-block: 1.25rem; /* 20px */
         --spacing-header-gap: 2rem; /* 32 */
-        --spacing-footer-padding-x: 6.5rem; /* 104 px */
-        --spacing-footer-padding-y: 5rem; /* 80px */
-        --spacing-section-padding-y: 5rem; /* 80px */
+        --spacing-footer-padding-inline: 6.5rem; /* 104 px */
+        --spacing-footer-padding-block: 5rem; /* 80px */
+        --spacing-section-padding-block: 5rem; /* 80px */
         --spacing-container-gap: 1.25rem; /* 20px */
-        --spacing-card-padding-xy: 2rem; /* 32px */
+        --spacing-card-padding: 2rem; /* 32px */
 
 
     }

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+        <title>My UX/UI Projects</title>
+
+        <!-- Font Import-->
+        <!-- Connexion aux serveurs Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+        <!-- Import de la police Anton -->
+        <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+
+        <!-- CSS Sheets-->
+        <link rel="stylesheet" href="css/1-token.css">
+        <link rel="stylesheet" href="css/2-global.css">
+        <link rel="stylesheet" href="css/3-components.css">
+        <link rel="stylesheet" href="css/4-header-footer.css">
+        <link rel="stylesheet" href="css/5-layout.css">
+
+        <!-- Favicon -->
+        <link rel="icon" type="image/svg+xml" href="asset/graphics/logos/favicon.svg">
+    </head>
+
+    <body class="ux-ui-page">
+
+        <!-- Display of the Header from header.html -->
+        <div id="header-placeholder"></div>
+
+        <main class="ux-ui-page__main">
+
+            <nav class="breadcrumb"
+            aria-label="breadcrumb">
+                <ol class="breadcrumb__list">
+                    <li class="breadcrumb__item">
+                        <a href="index.html"
+                        class="breadcrumb__link">
+                        Home
+                        </a>
+                    </li>
+                    <li class="breadcrumb__item breadcrumb__item--active">
+                        <span
+                        class="breadcrumb__link"
+                        aria-current="page"> <!-- aria-current is an accessibility attribute defined by WAI-ARIA that informs screen readers and assistive technologies that an element represents the currently active page within a set of navigation links -->
+                        My UX/UI Projects    
+                        </span> 
+                    </li>
+                </ol>
+            </nav>
+
+            <section class="section ux-ui-page__hero-section">
+                <h1>My UX/UI Projects</h1>
+                <div class="ux-ui-page__paragraph-container">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pellentesque mollis odio, vel rhoncus tortor pellentesque non. Fusce non tincidunt diam. Donec ullamcorper euismod magna, sit amet tincidunt quam laoreet et.
+                    </p>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pellentesque mollis odio, vel rhoncus tortor pellentesque non. Fusce non tincidunt diam. Donec ullamcorper euismod magna, sit amet tincidunt quam laoreet et.
+                    </p>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pellentesque mollis odio, vel rhoncus tortor pellentesque non. Fusce non tincidunt diam. Donec ullamcorper euismod magna, sit amet tincidunt quam laoreet et.
+                    </p>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pellentesque mollis odio, vel rhoncus tortor pellentesque non. Fusce non tincidunt diam. Donec ullamcorper euismod magna, sit amet tincidunt quam laoreet et.
+                    </p>
+                </div>
+                <!-- <a 
+                href="#my-work__nav-container"
+                class="hero-section__nav-arrow-link"
+                aria-label="Scroll to the Next Section">
+                    <img 
+                    src="asset/graphics/icons/icon-arrow-down-nav.svg"
+                    alt=""
+                    class="hero-section__nav-arrow">
+                </a> -->
+            </section>
+
+            <section id="work__nav-container" class="section work__nav-container">
+                <h2 class="work__nav-title">My featured projects</h2>
+                <nav class="work__grid">
+
+                    <a 
+                    href="project-1.html"
+                    class="work__card">
+                        <img 
+                        src="asset/images/bg-project-preview.png"
+                        alt="Project preview"
+                        class="card__preview-picture">
+                        <div class="card__content">
+                            <h3 class="card__title">Name of The Project</h3>
+                            <div class="card__tag-container">
+                                <div class="tag-container">
+                                    <p class="card__tag">Tag1</p>
+                                </div>
+                                <div class="tag-container">
+                                    <p class="card__tag">Tag2</p>
+                                </div>
+                                <div class="tag-container">
+                                    <p class="card__tag">Tag3</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a
+                    href="project-2.html" 
+                    class="work__card">
+                        <img 
+                        src="asset/images/bg-project-preview.png"
+                        alt="Project preview"
+                        class="card__preview-picture">
+                        <div class="card__content">
+                            <h3 class="card__title">Name of The Project</h3>
+                            <div class="card__tag-container">
+                                <div class="tag-container">
+                                    <p class="card__tag">Tag1</p>
+                                </div>
+                                <div class="tag-container">
+                                    <p class="card__tag">Tag2</p>
+                                </div>
+                                <div class="tag-container">
+                                    <p class="card__tag">Tag3</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a 
+                    href="project-3.html"
+                    class="work__card">
+                        <img 
+                        src="asset/images/bg-project-preview.png"
+                        alt="Project preview"
+                        class="card__preview-picture">
+                        <div class="card__content">
+                            <h3 class="card__title">Name of The Project</h3>
+                            <div class="card__tag-container">
+                                <div class="tag-container">
+                                    <p class="card__tag">Tag1</p>
+                                </div>
+                                <div class="tag-container">
+                                    <p class="card__tag">Tag2</p>
+                                </div>
+                                <div class="tag-container">
+                                    <p class="card__tag">Tag3</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </nav>
+            </section>
+
+        </main>
+
+        <!-- Display of the Footer from footer.html -->
+        <div id="footer-placeholder"></div>
+
+        <!-- Component Loader Script -->
+        <script>
+        fetch('components/header.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('header-placeholder').innerHTML = data);
+
+        fetch('components/footer.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('footer-placeholder').innerHTML = data);
+        </script>
+
+    </body>
+
+</html>
+

@@ -6,15 +6,19 @@
     display: flex;
     background-color: var(--bg-btn-primary-default);
     color: var(--fc-btn);
-    padding-inline: var(--spacing-btn-padding-x);
-    padding-block: var(--spacing-btn-padding-y);
+    padding-inline: var(--spacing-btn-padding-inline);
+    padding-block: var(--spacing-btn-padding-block);
     border-radius: 30px;
     text-decoration: none;
+    transition: background-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
+
 }
 
-.button:hover {
-    text-decoration: none;
+.button:hover, .icon-container:hover {
     background-color: var(--bg-btn-primary-hover);
+    box-shadow: var(--shadow-btn-highlight);
+    transform: translateY(-2px);
+    text-decoration: none;
 }
 
 .button--link {
@@ -27,6 +31,8 @@
     color: var(--blue-50);
 }
 
+
+
 /* Icons */
 .icon-container {
     width: 55px;
@@ -38,6 +44,38 @@
     align-items: center;
     justify-content: center;
 }
+
+
+
+/* Hero Nav Link */
+.hero-section__nav-arrow-link {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 66px;  /* Comfortable touch target size */
+    height: 66px;
+    padding: 0;   /* No padding to avoid border-box math glitches */
+}
+
+.hero-section__nav-arrow {
+    width: 48px;               /* Set size directly on the image */
+    height: auto;
+    display: block;
+    /* Runs a smooth infinite loop matching Figma's Smart Animate easing */
+    animation: floatArrow 2s ease-in-out infinite;
+}
+
+@keyframes floatArrow {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(8px); /* Moves down 8px at mid-point */
+  }
+}
+
+
 
 /* Forms */
 .form-container {
@@ -66,4 +104,103 @@
 .form-placeholder:focus {
     outline: 2px solid var(--blue-50, #0066ff);
     background-color: #ffffff;
+}
+
+
+
+/* Breadcrumb */
+.breadcrumb {
+    width: fit-content;
+    height: auto;
+    background-color: rgba(255, 255, 255, 0.4);
+    padding-inline: var(--spacing-header-padding-inline);
+    padding-block: var(--spacing-btn-padding-block);
+    border-radius: 0 117px 117px 0;
+}
+
+.breadcrumb__list {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    color: var(--fc-paragraph-light);
+}
+
+.breadcrumb__item--active .breadcrumb__link {
+    cursor: default;
+    text-decoration: underline;
+}
+
+.breadcrumb__item + .breadcrumb__item::before {                 /* Adds '>' before every item except the first one ('Home') */
+    content: ">";
+    user-select: none;                  /* Prevents users from accidentally selecting the separator */
+}
+
+
+/* Work card */
+.work__nav-container {
+    width: 100%;
+    color: var(--fc-global-light);
+}
+
+.work__grid {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--spacing-container-gap);
+}
+
+.work__card {
+    max-width: 350px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    color: var(--fc-global-dark);
+    background-color: var(--neutral-50);
+    border-radius: var(--radius-card);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.work__card:hover {
+    text-decoration: none;
+    z-index: 2;
+    box-shadow: 0px 0px 30px rgba(220, 207, 176, 0.5);
+    transform: scale(1.03);
+}
+
+.card__preview-picture {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    display: block;              /* Removes default inline whitespace */
+    align-self: stretch;        /* Forces the image to take full card width in flexbox */
+    border-top-left-radius: var(--radius-card);
+    border-top-right-radius: var(--radius-card);
+}
+
+.card__content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-card-gap);
+    padding: var(--spacing-card-padding);
+    align-items: flex-start;
+}
+
+.card__title {
+    font-size: var(--fs-body);
+    font-family: var(--font-family-paragraph);
+    text-transform: none;
+}
+
+.card__tag-container {
+    display: flex;
+    gap: 8px;
+}
+
+.tag-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--brown-50);
+    padding-inline: 8px;
 }

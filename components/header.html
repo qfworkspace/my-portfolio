@@ -10,8 +10,22 @@
             <nav class="header__nav">
                 <a href="index.html" class="header__home-link" aria-label="Go to Home Page"><img src="asset/graphics/logos/logo-neutral-100.svg" alt="" class="nav__logo"></a>
                 <ul class="header__nav-list">
+                    <li class="nav__item"><a href="index.html" class="nav__link">Home</a></li>
                     <li class="nav__item"><a href="about.html" class="nav__link">Who Am I?</a></li>
-                    <li class="nav__item"><a href="my-work.html" class="nav__link">My Work<img src="asset/graphics/icons/icon-arrow-dropdown-disabled.svg" alt="" aria-hidden="true" class="nav__icon--disabled"><img src="asset/graphics/icons/icon-arrow-dropdown-abled.svg" alt="" aria-hidden="true" class="nav__icon--abled"></a>
+                    <li class="nav__item">
+                        <button 
+                        type="button" 
+                        class="nav__link nav__dropdown-trigger" 
+                        aria-expanded="false" 
+                        aria-haspopup="true">
+                        My Work
+                        <img src="asset/graphics/icons/icon-arrow-dropdown-disabled.svg" 
+                            alt="" aria-hidden="true" 
+                            class="nav__icon--disabled">
+                        <img src="asset/graphics/icons/icon-arrow-dropdown-abled.svg" 
+                            alt="" aria-hidden="true" 
+                            class="nav__icon--abled">
+                    </button>
                         
                         <!-- Dropdown Menu -->
                         <div class="nav__dropdown">
