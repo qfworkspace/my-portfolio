@@ -485,17 +485,18 @@
 }
 
 
+
 /* UX/UI Page */
-.ux-ui-page {
+.ux-ui-page, .logo-page, .projects-3d-page {
     background-image: url(../asset/images/bg-ux-ui.png);
     background-repeat: no-repeat;
 }
 
-.ux-ui-page__main {
+.ux-ui-page__main, .logo-page__main, .projects-3d-page__main {
     padding-top: 138px;
 }
 
-.ux-ui-page__hero-section {
+.ux-ui-page__hero-section, .logo-page__hero-section, .projects-3d-page__hero-section {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -503,10 +504,159 @@
     color: var(--fc-global-light);
 }
 
-.ux-ui-page__paragraph-container {
+.ux-ui-page__paragraph-container, .logo-page__paragraph-container, .projects-3d-page__paragraph-container {
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: var(--spacing-container-gap);
+}
+
+
+
+/* 3D Projcts Page */
+.projects-3d-page {
+    background-image: url(../asset/images/bg-3d-project.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 100dvh;
+}
+
+.project-case-study {
+    padding-block: var(--spacing-section-padding-block);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-section-gap);
+}
+
+.projects-3d-page .hero-section__text-container {
+    background-color: var(--blue-900-transparency-60);
+    padding: 3.5rem;
+    border-radius: var(--radius-card);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px); /* Safari support */
+}
+
+.projects-3d-page__title {
+    color: var(--neutral-100);
+}
+
+.project-case-study__grid {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-section-gap);
+}
+
+.case-study-block {
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    
+    background-color: var(--blue-900-transparency-60);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);                 /* Safari support */
+    
+    color: var(--fc-global-light);
+    text-align: justify;
+    -webkit-hyphens: auto;                  /* Safari / iOS */
+    hyphens: auto;
+    text-wrap: pretty;                  /* Prevents ugly large white gaps between words */
+    
+    padding-inline: var(--spacing-body-padding-inline);
+    padding-block: 90px;
+    gap: 1rem;
+}
+
+.case-study-block--overview {
+    align-self: center;
+    margin-inline: var(--spacing-body-padding-inline);
+    text-align: left;
+
+    width: calc(100% - (var(--spacing-body-padding-inline) * 2));
+
+    gap: var(--spacing-container-gap);
+}
+
+.case-study-meta {
+    gap: var(--spacing-container-gap);
+    display: flex;
+    flex-direction: column;
+}
+
+.case-study-item {
+    list-style: disc;
+    margin-left: 36px;
+}
+
+.case-study--right-indent {
+    margin-left: 48px;
+    align-self: flex-end;
+    border-radius: var(--radius-card) 0 0 var(--radius-card);
+}
+
+.case-study--left-indent {
+    margin-right: 48px;
+    align-self: flex-start;
+    border-radius: 0 var(--radius-card) var(--radius-card) 0;
+}
+
+.case-study--center-indent {
+    margin-inline: var(--spacing-body-padding-inline);
+    align-self: center;
+    border-radius: var(--radius-card);
+}
+
+                    /* 3D Projects Gallery */
+.projects-3d-page__gallery {
+    display: flex;
+    flex-direction: column;
+}
+
+.gallery-item {
+    width: 100%;
+    height: fit-content;
+}
+
+.gallery-item__img {
+    width: 100%;
+    height: auto;
+}
+
+
+
+
+
+
+@media (min-width: 680px) {
+    /* Parent: 6 equal tracks */
+.projects-3d-page__gallery {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 1rem;
+}
+
+/* Picture 1: Full width (100%) */
+.gallery-item1 {
+    grid-column: span 6;
+}
+
+/* Pictures 2, 3, 4: One-third width each (~33%) */
+.gallery-item2,
+.gallery-item3,
+.gallery-item4 {
+    grid-column: span 2;
+}
+
+/* Pictures 5, 6, 7: Half width each (50%) */
+.gallery-item5,
+.gallery-item6,
+.gallery-item7,
+.gallery-item8 {
+    grid-column: span 3;
+}
+    
 }
